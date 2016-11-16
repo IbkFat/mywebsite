@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/menubar.css"></link>
+</head>
+<body>
+    <div class="page-content">
+        <!-- Header with logo and menubar -->
+        <header>
+            <!-- Menubar -->
+            <div id="lst" class="menurow"></div>
+
+            <div class="logo">
+                <a href='index.html'>
+                    <img src='imevrywman.png' alt="Smiley face"></img>
+                </a>
+                <!--<button id="sign-out-button" class="auth-things"><i class="material-icons">account_circle</i> Sign out</button>-->
+            </div>
+            
+        </header>
+        
+        <div class='main-text'>
+            <!-- Show the list of all posts -->
+            <section id="user-posts-list">
+            </section>
+        </div>
+    </div>
+
+    <script type='text/javascript' src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+    <script type='text/javascript'>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBwC65p9h19NloB1ExqGeqg10lKlebFq-M",
+            authDomain: "blog-60df1.firebaseapp.com",
+            databaseURL: "https://blog-60df1.firebaseio.com",
+            storageBucket: "blog-60df1.appspot.com",
+            messagingSenderId: "53433605493"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script type='text/javascript' src='js/main.js'></script>
+
+</body>
+</html>
