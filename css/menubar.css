@@ -32,7 +32,7 @@ h2.category-ep-title {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    color: #10AAFF;
+    color: #00CCCC;
     text-transform: uppercase;
 }
 a.category-ep-link {
@@ -50,7 +50,7 @@ div.excerpt {
     padding-bottom: 40px;
 }
 a.readmore {
-    color: #10AAFF;
+    color: #00CCCC;
     text-decoration: none;
     font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
     text-transform: uppercase;
@@ -58,7 +58,7 @@ a.readmore {
     
 }
 a.readmore:hover {
-    color: #ECFF00;
+    color: #00CCCC;
 }
 div.excerpt-hidden {
     display: none;
@@ -97,7 +97,7 @@ section.user-posts-list{
     padding: 0;
     right: 0;
     left: 0;
-    background-color: #ECFF00;
+    background-color: #00CCCC;
     overflow: hidden;
 }
 .menuitem {
@@ -111,4 +111,19 @@ section.user-posts-list{
     text-decoration: none;
     text-transform: uppercase;
     float: left;
+}
+.page-content {
+    background-color: #f5f5f5
+}
+.banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px
+}
+.fb-login-button {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -30px;
 }
