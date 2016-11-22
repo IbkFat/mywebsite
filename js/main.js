@@ -89,3 +89,5 @@ function addorremove(ind, num) {
         ind.innerHTML = 'Continue'
     }
 }
+
+function login
