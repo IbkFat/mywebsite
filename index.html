@@ -4,21 +4,35 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/menubar.css"></link>
-    <script type='text/javascript' src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
-    <script type='text/javascript'>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyBwC65p9h19NloB1ExqGeqg10lKlebFq-M",
-            authDomain: "blog-60df1.firebaseapp.com",
-            databaseURL: "https://blog-60df1.firebaseio.com",
-            storageBucket: "blog-60df1.appspot.com",
-            messagingSenderId: "53433605493"
-        };
-        firebase.initializeApp(config);
-    </script>
 </head>
 
 <body>
+    <script type='text/javascript'>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '203598820091837',
+                xfbml      : true,
+                version    : 'v2.8'
+            });
+        };
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=203598820091837";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
     <div class="page-content">
         <!-- Header with logo and menubar -->
         <header>
@@ -46,35 +60,19 @@
         </div>
     </div>
 
-    <script type='text/javascript' src='js/main.js'></script>
+    <script type='text/javascript' src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
     <script type='text/javascript'>
-        var provider = new firebase.auth.FacebookAuthProvider();
-        firebase.auth().signInWithPopup(provider).then(function(result) {
-        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-        var token = result.credential.accessToken;
-        // The signed-in user info.
-        var user = result.user;
-        // ...
-        }).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // The email of the user's account used.
-        var email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
-        // ...
-        });
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBwC65p9h19NloB1ExqGeqg10lKlebFq-M",
+            authDomain: "blog-60df1.firebaseapp.com",
+            databaseURL: "https://blog-60df1.firebaseio.com",
+            storageBucket: "blog-60df1.appspot.com",
+            messagingSenderId: "53433605493"
+        };
+        firebase.initializeApp(config);
     </script>
-    <div id="fb-root"></div>
-    <script type="text/javascript">(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=203598820091837";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <script type='text/javascript' src='js/main.js'></script>
 
 </body>
 
