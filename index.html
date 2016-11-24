@@ -1,38 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang = "en">
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/menubar.css"></link>
-</head>
-
-<body>
+     <script type='text/javascript' src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
     <script type='text/javascript'>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId      : '203598820091837',
-                xfbml      : true,
-                version    : 'v2.8'
-            });
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBwC65p9h19NloB1ExqGeqg10lKlebFq-M",
+            authDomain: "blog-60df1.firebaseapp.com",
+            databaseURL: "https://blog-60df1.firebaseio.com",
+            storageBucket: "blog-60df1.appspot.com",
+            messagingSenderId: "53433605493"
         };
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+        firebase.initializeApp(config);
     </script>
-
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=203598820091837";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
+</head>
+<body>
     <div class="page-content">
         <!-- Header with logo and menubar -->
         <header>
@@ -45,35 +29,27 @@
                 </a>
             </div>
 
-
             <div class="banner">
                 <p>Weekly articles on health and beauty to help you look and feel your best</p>
-                <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
             </div>
-
         </header>
-
+        
         <div class='main-text'>
             <!-- Show the list of all posts -->
             <section id="user-posts-list">
             </section>
         </div>
+
+        <div class='signup'>
+            <p class='join' >Sign up to join our community</p>
+            <button class='logbutton' id='login'>Sign up</button>
+        </div>
     </div>
+    
+    <footer>
+        <div class="copyright">© 2016 IbukunF</div>
+    </footer>
 
-    <script type='text/javascript' src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
-    <script type='text/javascript'>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyBwC65p9h19NloB1ExqGeqg10lKlebFq-M",
-            authDomain: "blog-60df1.firebaseapp.com",
-            databaseURL: "https://blog-60df1.firebaseio.com",
-            storageBucket: "blog-60df1.appspot.com",
-            messagingSenderId: "53433605493"
-        };
-        firebase.initializeApp(config);
-    </script>
     <script type='text/javascript' src='js/main.js'></script>
-
 </body>
-
 </html>
