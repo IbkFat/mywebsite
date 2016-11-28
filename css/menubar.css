@@ -168,7 +168,7 @@ input[type=text], input[type=password] {
     width: 100%;
 }
 
-.signup {
+.cancelbtn {
     color: white;
     margin: 8px 0;
     border: #f44336;
@@ -272,14 +272,14 @@ span.psw {
        width: 100%;
     }
 }
-.cancelbtn {
-    color: #00CCCC;
+.signup {
+    color: white;
     margin: 8px 0;
-    border: 1px solid #ccc;
+    border: none;
     cursor: pointer;
     width: 100px;
     padding: 10px 18px;
-    background-color: white;
+    background-color: #00B2B2;
     position: relative;
     left: 80px;
 }
