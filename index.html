@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/menubar.css"></link>
-     <script type='text/javascript' src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+    <script type='text/javascript' src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
     <script type='text/javascript'>
         // Initialize Firebase
         var config = {
@@ -16,6 +17,7 @@
         firebase.initializeApp(config);
     </script>
 </head>
+
 <body>
     <div class="page-content">
         <!-- Header with logo and menubar -->
@@ -33,7 +35,7 @@
                 <p>Weekly articles on health and beauty to help you look and feel your best</p>
             </div>
         </header>
-        
+
         <div class='main-text'>
             <!-- Show the list of all posts -->
             <section id="user-posts-list">
@@ -41,15 +43,43 @@
         </div>
 
         <div class='signup'>
-            <p class='join' >Sign up to join our community</p>
-            <button class='logbutton' id='login'>Sign up</button>
+            <p class='join'>Sign in to comment and get access to exclusive content</p>
+            <!-- Button to open the modal login form -->
+            <button class='logbutton' id='login' onclick="document.getElementById('id01').style.display='block'">Sign in</button>
+
+            <!-- The Modal -->
+            <div id="id01" class="modal">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                <!-- Modal Content -->
+                <form class="modal-content animate" action="action_page.php">
+                    <div class="imgcontainer">
+                        <img src="imevrywman2.png" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div class="container">
+                        <label class='label'><b>Email</b></label>
+                        <input type="text" placeholder="Your Email" name="uname" required>
+
+                        <label class='label'><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <button type="submit" class='login'>Login</button>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-    
+
     <footer>
         <div class="copyright">© 2016 IbukunF</div>
     </footer>
 
     <script type='text/javascript' src='js/main.js'></script>
 </body>
+
 </html>
