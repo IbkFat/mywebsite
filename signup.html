@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/menubar.css"></link>
@@ -16,16 +17,8 @@
         firebase.initializeApp(config);
     </script>
 </head>
+
 <body>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=203598820091837";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
     <div class="page-content">
         <!-- Header with logo -->
         <header>
@@ -34,20 +27,36 @@
                     <img src='imevrywman2.png' alt="Smiley face"></img>
                 </a>
             </div>
-            
-            <div class="banner">
-                <p>Join us and feel your best</p>
+
+            <div class="wlcme">
+                <p>Join us, it's easy!</p>
             </div>
-            
+
         </header>
-        
+
         <div class='signupwrapper'>
-            <section id="user-posts-list">
-            </section>
+            <label class='label'><b>First Name</b></label>
+            <input class='firstName' type="text" placeholder="Your First Name" name="fname" required>
+
+            <label class='label'><b>Last Name</b></label>
+            <input class='lastName' type="text" placeholder="Your Last Name" name="lname" required>
+
+            <label class='label'><b>Username</b></label>
+            <input type="text" placeholder="Your username" name="uname" required>
+
+            <label class='label'><b>Password</b></label>
+            <input type="password" placeholder="Your Password" name="psw" required>
+
+            <label class='label'><b>Re-enter Password</b></label>
+            <input type="password" placeholder="Your Password" name="psw" required>
+
+            <button type="submit" class='login'>Login</button>
         </div>
+    </div>
     </div>
 
     <script type='text/javascript' src='js/main.js'></script>
 
 </body>
+
 </html>
